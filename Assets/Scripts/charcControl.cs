@@ -16,7 +16,7 @@ public class charcControl : MonoBehaviour
 			
 	void Update ()
 
-	{
+	{ 
 	float moveHorizontal = Input.GetAxis ("Horizontal");
 	float moveVertical = Input.GetAxis ("Vertical");
 
