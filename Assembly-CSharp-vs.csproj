@@ -5,7 +5,7 @@
 	<Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
 	<ProductVersion>10.0.20506</ProductVersion>
 	<SchemaVersion>2.0</SchemaVersion>
-	<ProjectGuid>{F0F3A46E-2D05-B28F-FED8-ACE2E0C2A811}</ProjectGuid>
+	<ProjectGuid>{ABAC8837-FF9B-69F0-18FD-4A020B8B1E75}</ProjectGuid>
 	<OutputType>Library</OutputType>
 	<AppDesignerFolder>Properties</AppDesignerFolder>
 	<RootNamespace></RootNamespace>
@@ -46,15 +46,18 @@
 	</Reference>
   </ItemGroup>
   <ItemGroup>
-     <Compile Include="Assets\DestroyByBoundary.cs" />
-     <Compile Include="Assets\DestroyScript.cs" />
-     <Compile Include="Assets\JellySpawner.cs" />
-     <Compile Include="Assets\Kill.cs" />
-     <Compile Include="Assets\Mover.cs" />
-     <Compile Include="Assets\enemy.cs" />
-     <Compile Include="Assets\playerController.cs" />
-     <Compile Include="Assets\shooting.cs" />
-     <Compile Include="Assets\shotScript.cs" />
+     <Compile Include="Assets\scripts\DestroyByBoundary.cs" />
+     <Compile Include="Assets\scripts\DestroyScript.cs" />
+     <Compile Include="Assets\scripts\JellySpawner.cs" />
+     <Compile Include="Assets\scripts\Kill.cs" />
+     <Compile Include="Assets\scripts\Mover.cs" />
+     <Compile Include="Assets\scripts\enemy.cs" />
+     <Compile Include="Assets\scripts\fightingMover.cs" />
+     <Compile Include="Assets\scripts\fightingSpawner.cs" />
+     <Compile Include="Assets\scripts\jellyMover.cs" />
+     <Compile Include="Assets\scripts\playerController.cs" />
+     <Compile Include="Assets\scripts\shooting.cs" />
+     <Compile Include="Assets\scripts\shotScript.cs" />
  <Reference Include="UnityEngine.UI">
  <HintPath>/Applications/Unity/Unity.app/Contents/UnityExtensions/Unity/GUISystem/UnityEngine.UI.dll</HintPath>
  </Reference>
