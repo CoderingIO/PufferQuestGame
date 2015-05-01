@@ -8,7 +8,6 @@ public class jellyMover : MonoBehaviour
 	public float raycastLength = 1f;
 	public new Rigidbody2D rigidbody2D;
 	public float forceMultiplier;
-	public Transform target;
 
 
 	public LayerMask layerMask;
