@@ -52,6 +52,8 @@
      <Compile Include="Assets\Kill.cs" />
      <Compile Include="Assets\Mover.cs" />
      <Compile Include="Assets\enemy.cs" />
+     <Compile Include="Assets\images\ExitGame.cs" />
+     <Compile Include="Assets\images\PlayGame.cs" />
      <Compile Include="Assets\playerController.cs" />
      <Compile Include="Assets\score.cs" />
      <Compile Include="Assets\shooting.cs" />
