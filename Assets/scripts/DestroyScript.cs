@@ -2,7 +2,9 @@
 using System.Collections;
 
 
-public class DestroyScript : MonoBehaviour { void Start ()
+public class DestroyScript : MonoBehaviour 
+{ 
+	void Start ()
 		
 		{
 			
@@ -17,18 +19,15 @@ public class DestroyScript : MonoBehaviour { void Start ()
 			
 		{
 		Debug.Log ("I was hit");
-			if(other.gameObject.tag == "Enemy")
+			if(other.gameObject.tag == "quill")
 
 				
 			{
 				
-				DestroyObject(other.gameObject);
+				DestroyObject(gameObject);
 				
 			}
-		} }
+		} 
+}
 
 
-
-// public bool characterInQuicksand;
-// void OnTriggerEnter2D(Collider2D other) {
-//	characterInQuicksand = true;
