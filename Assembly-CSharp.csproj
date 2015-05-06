@@ -46,18 +46,29 @@
 	</Reference>
   </ItemGroup>
   <ItemGroup>
+     <Compile Include="Assets\images\ExitGame.cs" />
+     <Compile Include="Assets\images\PlayGame.cs" />
+     <Compile Include="Assets\scripts\BackgroundParallax.cs" />
+     <Compile Include="Assets\scripts\CameraFollow.cs" />
      <Compile Include="Assets\scripts\DestroyByBoundary.cs" />
      <Compile Include="Assets\scripts\DestroyScript.cs" />
+     <Compile Include="Assets\scripts\EnemyAttack.cs" />
+     <Compile Include="Assets\scripts\ExitStrategy.cs" />
      <Compile Include="Assets\scripts\JellySpawner.cs" />
      <Compile Include="Assets\scripts\Kill.cs" />
      <Compile Include="Assets\scripts\Mover.cs" />
-     <Compile Include="Assets\scripts\enemy.cs" />
+     <Compile Include="Assets\scripts\Pause.cs" />
+     <Compile Include="Assets\scripts\PlayerHealth.cs" />
+     <Compile Include="Assets\scripts\currentScore.cs" />
+     <Compile Include="Assets\scripts\fightingDeath.cs" />
      <Compile Include="Assets\scripts\fightingMover.cs" />
      <Compile Include="Assets\scripts\fightingSpawner.cs" />
+     <Compile Include="Assets\scripts\jellyDeath.cs" />
      <Compile Include="Assets\scripts\jellyMover.cs" />
      <Compile Include="Assets\scripts\playerController.cs" />
+     <Compile Include="Assets\scripts\quillDeath.cs" />
+     <Compile Include="Assets\scripts\quillMover.cs" />
      <Compile Include="Assets\scripts\shooting.cs" />
-     <Compile Include="Assets\scripts\shotScript.cs" />
  <Reference Include="UnityEngine.UI">
  <HintPath>/Applications/Unity/Unity.app/Contents/UnityExtensions/Unity/GUISystem/UnityEngine.UI.dll</HintPath>
  </Reference>
