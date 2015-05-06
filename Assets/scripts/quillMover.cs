@@ -16,6 +16,6 @@ public class move : MonoBehaviour {
 	// Update is called once per frame
 	void Update ()
 	{
-		GetComponent<Rigidbody>().AddForce(transform.right * speed);
+	//	GetComponent<Rigidbody2D>().AddForce(transform.right);
 	}
 }

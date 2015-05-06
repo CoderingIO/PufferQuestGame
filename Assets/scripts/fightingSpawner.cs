@@ -9,7 +9,9 @@ public class fightingSpawner : MonoBehaviour {
 	public GameObject fish;
 	public float fishyWait;
 	public Vector2 spawnValues;
-	
+
+	public Transform player;
+
 	void Start()
 	{
 		StartCoroutine (SpawnWaves ());
@@ -24,7 +26,9 @@ public class fightingSpawner : MonoBehaviour {
 				
 				Vector2 spawnPosition = new Vector2 (spawnValues.x, Random.Range(-spawnValues.y, spawnValues.y));
 				Quaternion spawnRotation = Quaternion.Euler (0f, 0f, 20f);
-				Instantiate (fish, spawnPosition, spawnRotation);
+				GameObject newFish = Instantiate (fish, spawnPosition, spawnRotation) as GameObject;
+				newFish.GetComponent<iTweenEvent>().Values["position"] = player;
+				newFish.GetComponent<iTweenEvent>().Play ();
 				yield return new WaitForSeconds (spawnWait);
 				
 			}

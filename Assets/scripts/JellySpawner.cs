@@ -23,7 +23,7 @@ public class JellySpawner : MonoBehaviour {
 			{
 
 				Vector2 spawnPosition = new Vector2 (spawnValues.x, Random.Range(-spawnValues.y, spawnValues.y));
-				Quaternion spawnRotation = Quaternion.Euler (0f, 0f, 45f);
+				Quaternion spawnRotation = Quaternion.Euler (0f, 0f, 90f);
 				Instantiate (jellyFish, spawnPosition, spawnRotation);
 				yield return new WaitForSeconds (spawnWait);
 				
@@ -31,9 +31,5 @@ public class JellySpawner : MonoBehaviour {
 			
 			yield return new WaitForSeconds (jellyWait);
 		}
-	}
-	void Update()
-	{
-
 	}
 }

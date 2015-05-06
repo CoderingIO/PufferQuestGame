@@ -29,17 +29,17 @@ public class jellyMover : MonoBehaviour
 		RaycastHit2D hit = Physics2D.Raycast(rigidbody2D.position, Vector2.right, raycastLength, layerMask);
 		if (hit.collider != null)
 		{
-			Debug.Log("I hit a " + hit.collider.name);
+
 			movingRight = false;
-			transform.localScale = new Vector3(1f, 1f, -1f);
+			transform.localScale = new Vector3(1f, 1f, 1f);
 		}
 
 		hit = Physics2D.Raycast(rigidbody2D.position, -Vector2.right, raycastLength, layerMask);
 		if (hit.collider != null)
 		{
-			Debug.Log("I hit a " + hit.collider.name);
+
 			movingRight = true;
-			transform.localScale = new Vector3(1f, 1f, 1f);
+			transform.localScale = new Vector3(1f, -1f, 1f);
 		}
 	}
 

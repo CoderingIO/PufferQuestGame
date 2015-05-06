@@ -2,7 +2,7 @@
 using System.Collections;
 using UnityEngine.UI;
 		
-public class shooting : MonoBehaviour 
+public class wBshooting : MonoBehaviour 
 {
 	public GameObject shot;
 	public Transform shotSpawn;
@@ -23,24 +23,21 @@ public class shooting : MonoBehaviour
 	{
 		GameObject instance;
 		{
-		if (Input.GetKeyDown(KeyCode.Space) && Time.time > nextFire)
+			if (Input.GetButtonDown("Fire1") && Time.time > nextFire)
 			{
 				nextFire = Time.time + fireRate;
 				instance = Instantiate(shot, transform.position, transform.rotation) as GameObject;
 				instance.transform.rotation = Quaternion.AngleAxis(0, Vector3.forward);
+				if (playerController.right == false)
 				instance.GetComponent<Rigidbody2D>().AddForce(transform.right * bulletSpeed);
+				else
+					instance.GetComponent<Rigidbody2D>().AddForce(transform.right * -bulletSpeed);
+
 			}
 
 		}			
 	}
-	//void OnTriggerEnter2D (Collider2D other)
-	//{
-//if (other.gameObject.tag == "fightingFish" || other.gameObject.tag == "jellyfish")
-//		{
 
-//			DestroyObject (other.gameObject);
-//		}
-//	}
 }
 
 

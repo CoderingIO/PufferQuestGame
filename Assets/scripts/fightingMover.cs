@@ -8,6 +8,7 @@ public class fightingMover : MonoBehaviour
 	private Transform myTransform;
 
 
+
 	
 
 
@@ -21,6 +22,7 @@ public class fightingMover : MonoBehaviour
 	void Update ()
 	{
 		transform.position = Vector2.MoveTowards(transform.position, target.position, speed * Time.deltaTime);
+
 
 	}
 }

@@ -1,25 +1,47 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class fightingDeath : MonoBehaviour {
-	
+public class fightingDeath : MonoBehaviour 
+{
+
+	public int hp = 2;
 
 		void OnTriggerEnter2D(Collider2D other)
 			
 			
 		{
-			Debug.Log ("I was hit");
+
 			if(other.gameObject.tag == "quill")
 				
 				
 			{
 				
-				DestroyObject(gameObject);
-				currentScore.Score += 1000;
+			hp--;
 				
 			}
-		} 
+		}
+
+	void Update ()
+	{
+		if (hp == 0)
+		{
+			DestroyObject(gameObject);
+			currentScore.Score += 1000;
+		}
 	}
+
+	public void OnMoveFinished()
+	{
+		StartCoroutine(waitAndRestart());
+	}
+
+	IEnumerator waitAndRestart()
+	{
+		yield return new WaitForSeconds(1f);
+		GetComponent<iTweenEvent>().Play();
+	}
+
+}
 	
 	
 

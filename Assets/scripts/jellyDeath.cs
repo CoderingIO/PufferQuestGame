@@ -14,15 +14,11 @@ public class jellyDeath : MonoBehaviour
 		
 		
 	{
-		Debug.Log ("I was hit");
+
 		if(other.gameObject.tag == "quill")
-			
-			
 		{
-			
 			DestroyObject(gameObject);
 			currentScore.Score += 500;
-			
 		}
 	} 
 }
