@@ -5,7 +5,6 @@ using UnityEngine.UI;
 public class wBshooting : MonoBehaviour 
 {
 	public GameObject shot;
-	public Transform shotSpawn;
 	public float fireRate;
 	public float speed;
 	private float nextFire;
@@ -27,11 +26,24 @@ public class wBshooting : MonoBehaviour
 			{
 				nextFire = Time.time + fireRate;
 				instance = Instantiate(shot, transform.position, transform.rotation) as GameObject;
-				instance.transform.rotation = Quaternion.AngleAxis(0, Vector3.forward);
+				instance.transform.rotation = Quaternion.identity;
+
+
 				if (playerController.right == false)
-				instance.GetComponent<Rigidbody2D>().AddForce(transform.right * bulletSpeed);
+				{
+					instance.GetComponent<Rigidbody2D>().AddForce(transform.right * bulletSpeed);
+					instance.transform.localScale = new Vector3(.5f, .5f, 1f);
+
+
+				}
+
 				else
+				{
 					instance.GetComponent<Rigidbody2D>().AddForce(transform.right * -bulletSpeed);
+					instance.transform.localScale = new Vector3(-.5f, .5f, 1f);
+
+
+				}
 
 			}
 
