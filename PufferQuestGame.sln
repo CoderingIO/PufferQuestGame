@@ -3,6 +3,8 @@ Microsoft Visual Studio Solution File, Format Version 11.00
 
 Project("{DF8CF75B-F5EB-69ED-9B88-3DB5C793C27B}") = "PufferQuestGame", "Assembly-CSharp.csproj", "{ABAC8837-FF9B-69F0-18FD-4A020B8B1E75}"
 EndProject
+Project("{DF8CF75B-F5EB-69ED-9B88-3DB5C793C27B}") = "PufferQuestGame", "Assembly-CSharp-Editor.csproj", "{39D825AB-2284-3CB4-A880-358A63C5B20F}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -13,11 +15,15 @@ Global
 		{ABAC8837-FF9B-69F0-18FD-4A020B8B1E75}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{ABAC8837-FF9B-69F0-18FD-4A020B8B1E75}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{ABAC8837-FF9B-69F0-18FD-4A020B8B1E75}.Release|Any CPU.Build.0 = Release|Any CPU
+		{39D825AB-2284-3CB4-A880-358A63C5B20F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{39D825AB-2284-3CB4-A880-358A63C5B20F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{39D825AB-2284-3CB4-A880-358A63C5B20F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{39D825AB-2284-3CB4-A880-358A63C5B20F}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
-												GlobalSection(MonoDevelopProperties) = preSolution
+														GlobalSection(MonoDevelopProperties) = preSolution
 		StartupItem = Assembly-CSharp.csproj
 		Policies = $0
 		$0.TextStylePolicy = $1

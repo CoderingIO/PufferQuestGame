@@ -3,7 +3,7 @@ using System.Collections;
 
 public class fightingDeath : MonoBehaviour 
 {
-
+	public Animation death;
 	public int hp = 2;
 
 		void OnTriggerEnter2D(Collider2D other)
@@ -25,6 +25,7 @@ public class fightingDeath : MonoBehaviour
 	{
 		if (hp == 0)
 		{
+			death.Play();
 			DestroyObject(gameObject);
 			currentScore.Score += 1000;
 		}
