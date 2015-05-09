@@ -22,7 +22,7 @@ public class wBshooting : MonoBehaviour
 	{
 		GameObject instance;
 		{
-			if (Input.GetButtonDown("Fire1") && Time.time > nextFire)
+			if (Input.GetKeyDown("space") && Time.time > nextFire)
 			{
 				nextFire = Time.time + fireRate;
 				instance = Instantiate(shot, transform.position, transform.rotation) as GameObject;
