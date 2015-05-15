@@ -8,6 +8,7 @@ public class fightingDeath : MonoBehaviour
 	public Transform target;
 	private float dir;
 	private bool isDead;
+	public AudioClip died;
 
 
 	void Start ()
@@ -40,6 +41,10 @@ public class fightingDeath : MonoBehaviour
 			DestroyObject(gameObject, 5);
 			currentScore.Score += 1000;
 			isDead = true;
+			GetComponent<Collider2D>().enabled = false;
+			GetComponent<SpriteRenderer>().enabled = false;
+			AudioSource.PlayClipAtPoint(died, new Vector3(0, 0, 0));
+
 		}
 
 		dir = target.transform.position.x - transform.position.x;

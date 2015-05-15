@@ -1,5 +1,9 @@
 ﻿<Properties>
+<<<<<<< HEAD
   <MonoDevelop.Ide.Workspace />
+=======
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+>>>>>>> 3590ebd6ea15ce2b013c803c621ee42975227f9f
   <MonoDevelop.Ide.Workbench />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore />
