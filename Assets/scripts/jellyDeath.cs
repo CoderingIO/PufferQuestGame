@@ -4,6 +4,10 @@ using System.Collections;
 
 public class jellyDeath : MonoBehaviour 
 { 
+	public Animator death;
+	private bool isDead;
+	public AudioClip jDied;
+
 
 	
 	void Update () {
@@ -15,10 +19,19 @@ public class jellyDeath : MonoBehaviour
 		
 	{
 
-		if(other.gameObject.tag == "quill")
+		if(other.gameObject.tag == "quill" && isDead == false)
+		   
 		{
-			DestroyObject(gameObject);
+			//death.SetTrigger("Dying");
+
+			isDead = true;
+			DestroyObject(gameObject, 1);
 			currentScore.Score += 500;
+			GetComponent<Collider2D>().enabled = false;
+			GetComponent<SpriteRenderer>().enabled = false;
+			AudioSource.PlayClipAtPoint(jDied, new Vector3(0, 0, 0));
+
+			
 		}
 	} 
 }

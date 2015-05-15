@@ -41,18 +41,18 @@ public class MenuController : MonoBehaviour {
 		
 		if(GUILayout.Button("Add Score"))
 		{
-			HighScoreManager._instance.SaveHighScore(name,System.Int32.Parse(score));
-			highscore = HighScoreManager._instance.GetHighScore();    
+			HighScoreManager.SaveHighScore(name,System.Int32.Parse(score));
+			highscore = HighScoreManager.GetHighScore();    
 		}
 		
 		if(GUILayout.Button("Get LeaderBoard"))
 		{
-			highscore = HighScoreManager._instance.GetHighScore();            
+			highscore = HighScoreManager.GetHighScore();            
 		}
 		
 		if(GUILayout.Button("Clear Leaderboard"))
 		{
-			HighScoreManager._instance.ClearLeaderBoard();            
+			//HighScoreManager.ClearLeaderBoard();            
 		}
 		
 		GUILayout.Space(60);

@@ -12,32 +12,11 @@ using System.Collections.Generic;
 /// No need to attach this to any game object, thought it would create errors attaching.
 /// </summary>
 
-public class HighScoreManager : MonoBehaviour
+public class HighScoreManager
 {
-	
-	private static HighScoreManager m_instance;
 	private const int LeaderboardLength = 10;
 	
-	public static HighScoreManager _instance {
-		get {
-			if (m_instance == null) {
-				m_instance = new GameObject ("HighScoreManager").AddComponent<HighScoreManager> ();                
-			}
-			return m_instance;
-		}
-	}
-	
-	void Awake ()
-	{
-		if (m_instance == null) {
-			m_instance = this;            
-		} else if (m_instance != this)        
-			Destroy (gameObject);    
-		
-		DontDestroyOnLoad (gameObject);
-	}
-	
-	public void SaveHighScore (string name, int score)
+	public static void SaveHighScore (string name, int score)
 	{
 		List<Scores> HighScores = new List<Scores> ();
 		
@@ -79,10 +58,10 @@ public class HighScoreManager : MonoBehaviour
 			PlayerPrefs.SetInt ("HighScore" + i + "score", HighScores [i - 1].score);
 			i++;
 		}
-		
+		PlayerPrefs.Save();
 	}
 	
-	public List<Scores>  GetHighScore ()
+	public static List<Scores>  GetHighScore ()
 	{
 		List<Scores> HighScores = new List<Scores> ();
 		
@@ -98,7 +77,7 @@ public class HighScoreManager : MonoBehaviour
 		return HighScores;
 	}
 	
-	public void ClearLeaderBoard ()
+	public static void ClearLeaderBoard ()
 	{
 		//for(int i=0;i<HighScores.
 		List<Scores> HighScores = GetHighScore();
@@ -108,11 +87,6 @@ public class HighScoreManager : MonoBehaviour
 			PlayerPrefs.DeleteKey("HighScore" + i + "name");
 			PlayerPrefs.DeleteKey("HighScore" + i + "score");
 		}
-	}
-	
-	void OnApplicationQuit()
-	{
-		PlayerPrefs.Save();
 	}
 }
 

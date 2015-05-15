@@ -9,6 +9,7 @@ public class wBshooting : MonoBehaviour
 	public float speed;
 	private float nextFire;
 	public float bulletSpeed = 500;
+	public AudioClip fired;
 			
 			
 	void Start ()
@@ -27,6 +28,8 @@ public class wBshooting : MonoBehaviour
 				nextFire = Time.time + fireRate;
 				instance = Instantiate(shot, transform.position, transform.rotation) as GameObject;
 				instance.transform.rotation = Quaternion.identity;
+				AudioSource.PlayClipAtPoint(fired, new Vector3(0, 0, 0));
+
 
 
 				if (playerController.right == false)

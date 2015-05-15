@@ -7,15 +7,17 @@ public class Pause : MonoBehaviour {
 	// Update is called once per frame
 	void Update () 
 	{
-		if(Input.GetButtonDown("Cancel"))
+		if(Input.GetButtonDown("Escape")&& Time.timeScale == 1)
 		{
-			Time.timeScale = 0;
+			Debug.Log ("I am pressed");
 			PauseMenu.SetActive(true);
+			Time.timeScale = 0;
+
 		}
-		if(Time.timeScale == 0 && Input.GetButtonDown("Cancel"))
+		else if(Time.timeScale == 0 && Input.GetButtonDown("Escape"))
 		{
-			Time.timeScale = 1;
-			PauseMenu.SetActive(false);
+				Time.timeScale = 1;
+				PauseMenu.SetActive(false);
 		}
 	}
 }
