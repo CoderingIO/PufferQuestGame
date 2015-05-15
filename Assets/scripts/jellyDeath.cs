@@ -4,7 +4,7 @@ using System.Collections;
 
 public class jellyDeath : MonoBehaviour 
 { 
-
+	public Animator death;
 	
 	void Update () {
 		
@@ -17,7 +17,8 @@ public class jellyDeath : MonoBehaviour
 
 		if(other.gameObject.tag == "quill")
 		{
-			DestroyObject(gameObject);
+			death.SetTrigger("Dying");
+			DestroyObject(gameObject, 5);
 			currentScore.Score += 500;
 		}
 	} 
