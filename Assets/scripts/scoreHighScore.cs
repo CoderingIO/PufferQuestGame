@@ -5,8 +5,8 @@ using System.Collections.Generic;
 
 public class scoreHighScore : MonoBehaviour
 {
-	public Text scoreText;
-	public Text playerName;
+	public Text[] scoreText;
+	public Text[] playerName;
 	public static scoreHighScore instance;
 	
 	void Awake()
@@ -33,9 +33,15 @@ public class scoreHighScore : MonoBehaviour
 	
 	public void CharName()
 	{
-		playerName.text = 
-		PlayerPrefs.GetString ("playerName");
-		scoreText.text = currentScore.Score.ToString ();
+		List<Scores> allScores = HighScoreManager.GetHighScore ();
+
+		for (int i = 0; i < playerName.Length && i < allScores.Count; i++) {
+			Debug.Log("For index " + i + ", name is " + allScores[i].name + ", score is " + allScores[i].score);
+			playerName[i].text = allScores [i].name;
+
+			scoreText[i].text = allScores[i].score.ToString();
+			
+		}
 	}
 
 	

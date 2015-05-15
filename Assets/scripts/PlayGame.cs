@@ -8,9 +8,10 @@ public class PlayGame : MonoBehaviour {
 	
 	public void startGame ()
 	{
-
+		HighScoreManager.ClearLeaderBoard ();
 		PlayerPrefs.SetString ("playerName", playerName.text);
 		Application.LoadLevel("WaynesAIzone");
+		// Stage Select
 		Debug.Log ("level is noticed");
 	}
 	
